@@ -17,10 +17,10 @@ public class TodoList {
     @Column(name = "user_id")
     private Integer userId;
     private String content;
-    @Column(name = "beginTime")
+    @Column(name = "begin_time")
     private Timestamp beginTime;
-    @Column(name = "endTime")
-    private Timestamp endtTime;
+    @Column(name = "end_time")
+    private Timestamp endTime;
     private Integer level;
     private int remind;
 }

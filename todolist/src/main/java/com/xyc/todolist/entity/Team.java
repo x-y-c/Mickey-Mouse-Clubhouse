@@ -12,7 +12,7 @@ public class Team {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @Column(name = "teamname")
+    @Column(name = "team_name")
     private String teamName;
 
     @Column(name = "describe")

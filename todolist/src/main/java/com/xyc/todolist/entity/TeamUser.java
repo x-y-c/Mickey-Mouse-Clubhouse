@@ -12,7 +12,8 @@ public class TeamUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private Integer userid;
+    @Column(name = "user_id")
+    private Integer userId;
     @Column(name = "user_type")
     private Integer userType;
 

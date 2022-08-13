@@ -3,6 +3,8 @@ package com.xyc.todolist.utils;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.TokenExpiredException;
+import com.auth0.jwt.interfaces.DecodedJWT;
+import com.xyc.todolist.entity.User;
 
 import java.util.Date;
 
@@ -32,24 +34,26 @@ public class JWTUtils {
 
     /**
      * 创建jwttoken
-     * @param sub
+     *
+     * @param user
      * @return
      */
-    public static String createToken(String sub) {
-        return tokenPrefix + JWT.create().withSubject(sub)
+    public static String createToken(User user) {
+        return tokenPrefix + JWT.create().withClaim("userid", user.getId())
+                .withClaim("key", user.getPassword())
                 .withExpiresAt(new Date(System.currentTimeMillis() + expireTime))
                 .sign(Algorithm.HMAC256(secret));
     }
 
     /**
      * 验证token
+     *
      * @param token
      * @return
      */
     public static String validateToken(String token) {
         try {
-            return JWT.require(Algorithm.HMAC512(secret)).build()
-                    .verify(token.replace(tokenPrefix, "")).getSubject();
+            return getTokenInfo(token).getSubject();
         } catch (TokenExpiredException e) {
             throw new RuntimeException("token已经过期");
         } catch (Exception e) {
@@ -57,8 +61,10 @@ public class JWTUtils {
         }
     }
 
+
     /**
      * 判断是否需要更新
+     *
      * @param token
      * @return
      */
@@ -66,10 +72,7 @@ public class JWTUtils {
         Date expiresAt = null;
 
         try {
-            expiresAt = JWT.require(Algorithm.HMAC512(secret))
-                    .build()
-                    .verify(token.replace(tokenPrefix, ""))
-                    .getExpiresAt();
+            expiresAt = getTokenInfo(token).getExpiresAt();
         } catch (TokenExpiredException e) {
             return true;
         } catch (Exception e) {
@@ -77,4 +80,21 @@ public class JWTUtils {
         }
         return (expiresAt.getTime() - System.currentTimeMillis()) < (expireTime / 2);
     }
+
+    public static DecodedJWT getTokenInfo(String token) {
+        try {
+            return JWT.require(Algorithm.HMAC512(secret)).build().verify(token);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    public static Integer getUserId(DecodedJWT decodedJWT) {
+        if (decodedJWT == null) {
+            return -1;
+        } else {
+            return decodedJWT.getClaim("userId").asInt();
+        }
+    }
 }
+

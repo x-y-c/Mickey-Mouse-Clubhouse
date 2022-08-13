@@ -39,8 +39,9 @@ public class JWTUtils {
      * @return
      */
     public static String createToken(User user) {
-        return tokenPrefix + JWT.create().withClaim("userid", user.getId())
+        return tokenPrefix + JWT.create().withClaim("userId", user.getId())
                 .withClaim("key", user.getPassword())
+                .withClaim("username",user.getUsername())
                 .withExpiresAt(new Date(System.currentTimeMillis() + expireTime))
                 .sign(Algorithm.HMAC256(secret));
     }
@@ -53,7 +54,7 @@ public class JWTUtils {
      */
     public static String validateToken(String token) {
         try {
-            return getTokenInfo(token).getSubject();
+            return getTokenInfo(token).getClaim("username").asString();
         } catch (TokenExpiredException e) {
             throw new RuntimeException("token已经过期");
         } catch (Exception e) {
@@ -83,7 +84,8 @@ public class JWTUtils {
 
     public static DecodedJWT getTokenInfo(String token) {
         try {
-            return JWT.require(Algorithm.HMAC512(secret)).build().verify(token);
+            token = token.replace(tokenPrefix,"");
+            return JWT.require(Algorithm.HMAC256(secret)).build().verify(token);
         } catch (Exception e) {
             return null;
         }

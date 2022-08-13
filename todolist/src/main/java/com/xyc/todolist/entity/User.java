@@ -3,6 +3,7 @@ package com.xyc.todolist.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Table(name = "user")
 @Data
@@ -20,4 +21,12 @@ public class User {
     private String mobile;
     private String wxid;
     private String email;
+    private Integer enable;
+    private Timestamp createtime;
+    private Timestamp updatetime;
+
+    @PostUpdate
+    public void setDefaultData() {
+        this.updatetime = new Timestamp(System.currentTimeMillis());
+    }
 }

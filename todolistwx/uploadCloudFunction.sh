@@ -1,0 +1,1 @@
+"/Applications/wechatwebdevtools.app/Contents/MacOS/cli" cloud functions deploy --e cloud1-1gyy7b6mdf443429 --n quickstartFunctions --r --project "/Users/yang/code/Mickey-Mouse-Clubhouse/todolistwx" --report_first --report

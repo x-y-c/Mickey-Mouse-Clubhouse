@@ -3,7 +3,7 @@ package com.xyc.todolist.entity;
 import lombok.Data;
 
 import javax.persistence.*;
-import javax.persistence.criteria.CriteriaBuilder;
+import java.sql.Timestamp;
 
 @Data
 @Entity
@@ -18,4 +18,12 @@ public class TeamUser {
     private Integer userType;
 
     private Integer remind;
+
+    private Timestamp createtime;
+    private Timestamp updatetime;
+
+    @PostUpdate
+    public void update(){
+        this.updatetime =new Timestamp(System.currentTimeMillis());
+    }
 }

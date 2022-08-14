@@ -3,6 +3,7 @@ package com.xyc.todolist.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Entity
 @Data
@@ -22,4 +23,14 @@ public class Team {
 
     @Column(name = "theme_info")
     private String themeInfo;
+
+    private Timestamp createtime;
+
+    private Timestamp updatetime;
+
+
+    @PostUpdate
+    public void setDefault(){
+        this.updatetime = new Timestamp(System.currentTimeMillis());
+    }
 }

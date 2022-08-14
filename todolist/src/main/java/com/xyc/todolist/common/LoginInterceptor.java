@@ -25,6 +25,7 @@ public class LoginInterceptor implements HandlerInterceptor {
                 if (token == null) {
                     throw new RuntimeException("token信息无效，请登录");
                 }
+                //todo 更新密码的后的token验证有问题 需要解码后查询一次数据库
                 String s = JWTUtils.validateToken(token);
                 return s != null;
             }

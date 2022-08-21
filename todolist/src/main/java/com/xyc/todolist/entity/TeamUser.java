@@ -19,6 +19,9 @@ public class TeamUser {
 
     private Integer remind;
 
+    @Column(name = "team_id")
+    private Integer teamId;
+
     private Timestamp createtime;
     private Timestamp updatetime;
 

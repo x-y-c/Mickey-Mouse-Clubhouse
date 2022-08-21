@@ -61,7 +61,11 @@ public class TeamUserServiceImpl implements TeamUserService {
 
     @Override
     public List<TeamUser> updateUsersToAdmin(TeamUserDto teamUserDto) {
-        return null;
+        List<Integer> adminUsers = teamUserDto.getAdminUsers();
+        Integer teamId = teamUserDto.getTeamId();
+        List<TeamUser> users = teamUserRepo.findAllByTeamIdAndUserIdIn(teamId, adminUsers);
+        users.forEach(teamUser -> teamUser.setUserType(1));//1 是管理员
+        return teamUserRepo.saveAll(users);
     }
 
     @Override

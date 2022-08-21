@@ -7,6 +7,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface TeamUserRepo extends JpaRepository<TeamUser,Integer> {
+public interface TeamUserRepo extends JpaRepository<TeamUser, Integer> {
     List<TeamUser> findAllByTeamId(Integer teamId);
+
+    List<TeamUser> findAllByTeamIdAndUserIdIn(Integer teamId, List<Integer> userIds);
 }

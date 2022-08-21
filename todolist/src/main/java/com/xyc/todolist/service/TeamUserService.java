@@ -8,14 +8,21 @@ import java.util.List;
 public interface TeamUserService {
     /**
      * 添加小组成员
+     *
      * @return
      */
     List<TeamUser> addTeamUser(TeamUserDto teamUserDto);
 
     /**
-     *  更新小组成员
+     * 更新小组成员
+     *
      * @param teamUserDto
      * @return
      */
     List<TeamUser> updateTeamUser(TeamUserDto teamUserDto);
+
+    List<TeamUser> updateUsersToAdmin(TeamUserDto teamUserDto);
+
+    List<TeamUser>deleteUsers(TeamUserDto teamUserDto);
+
 }

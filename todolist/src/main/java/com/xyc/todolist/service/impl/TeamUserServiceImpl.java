@@ -69,7 +69,8 @@ public class TeamUserServiceImpl implements TeamUserService {
     }
 
     @Override
-    public List<TeamUser> deleteUsers(TeamUserDto teamUserDto) {
-        return null;
+    public void deleteUsers(TeamUserDto teamUserDto) {
+        List<Integer> deleteUsers = teamUserDto.getDeleteUsers();
+        teamUserRepo.deleteAllByIdInBatch(deleteUsers);
     }
 }

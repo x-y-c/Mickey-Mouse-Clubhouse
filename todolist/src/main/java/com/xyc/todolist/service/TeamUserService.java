@@ -23,6 +23,6 @@ public interface TeamUserService {
 
     List<TeamUser> updateUsersToAdmin(TeamUserDto teamUserDto);
 
-    List<TeamUser>deleteUsers(TeamUserDto teamUserDto);
+    void deleteUsers(TeamUserDto teamUserDto);
 
 }

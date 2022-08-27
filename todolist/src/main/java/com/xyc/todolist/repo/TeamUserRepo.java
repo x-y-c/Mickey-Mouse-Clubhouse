@@ -11,4 +11,6 @@ public interface TeamUserRepo extends JpaRepository<TeamUser, Integer> {
     List<TeamUser> findAllByTeamId(Integer teamId);
 
     List<TeamUser> findAllByTeamIdAndUserIdIn(Integer teamId, List<Integer> userIds);
+
+    List<TeamUser> findDistinctByUserId(Integer userId);
 }

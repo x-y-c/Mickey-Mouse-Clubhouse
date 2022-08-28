@@ -1,5 +1,6 @@
 package com.xyc.todolist.service;
 
+import com.xyc.todolist.dto.TeamResultDto;
 import com.xyc.todolist.entity.Team;
 
 import java.util.List;
@@ -36,7 +37,7 @@ public interface TeamService {
      * @param userid 当前登录用户id
      * @return 组信息列表
      */
-    public List<Team> getTeamList(Integer userid);
+    public List<TeamResultDto> getTeamList(Integer userid);
 
 
 }

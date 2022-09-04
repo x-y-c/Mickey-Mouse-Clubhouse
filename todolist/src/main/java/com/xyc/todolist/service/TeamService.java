@@ -13,7 +13,7 @@ public interface TeamService {
      * @param team
      * @return
      */
-    public Team createTeam(Team team);
+    Team createTeam(Team team);
 
     /**
      * 更新组信息
@@ -21,7 +21,7 @@ public interface TeamService {
      * @param team
      * @return
      */
-    public Team updateTeam(Team team);
+    Team updateTeam(Team team);
 
     /**
      * 删除组
@@ -29,7 +29,7 @@ public interface TeamService {
      * @param teamId
      * @return
      */
-    public boolean delTeam(Integer teamId);
+    boolean delTeam(Integer teamId);
 
     /**
      * 列出当前用户能看到的组信息
@@ -37,7 +37,7 @@ public interface TeamService {
      * @param userid 当前登录用户id
      * @return 组信息列表
      */
-    public List<TeamResultDto> getTeamList(Integer userid);
+    List<TeamResultDto> getTeamList(Integer userid);
 
 
 }

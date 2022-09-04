@@ -35,6 +35,9 @@ public class TodoList {
 
     private Timestamp updatetime;
 
+
+    private Integer status;
+
     @PostUpdate
     public void update(){
         this.updatetime = new Timestamp(System.currentTimeMillis());

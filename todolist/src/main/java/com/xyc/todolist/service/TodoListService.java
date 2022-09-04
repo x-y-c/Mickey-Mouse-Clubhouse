@@ -19,7 +19,7 @@ public interface TodoListService {
      * @return
      */
 
-    boolean updateTodoStatus(Integer todoId,Integer userId);
+    boolean updateTodoStatus(Integer todoId,Integer userId,Integer status);
 
     /**
      *  更新todo信息
@@ -42,4 +42,8 @@ public interface TodoListService {
      * @return
      */
     List<TodoList> getTodoList(Integer userId,Integer type);
+
+    /**
+     * 组内可以相互查看todo；
+     */
 }

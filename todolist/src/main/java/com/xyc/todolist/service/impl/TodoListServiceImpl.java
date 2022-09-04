@@ -51,11 +51,11 @@ public class TodoListServiceImpl implements TodoListService {
 
     @Override
     public List<TodoList> getTodolist(Integer userId) {
-        return null;
+        return todoListRepo.findAllByUserId(userId);
     }
 
     @Override
     public List<TodoList> getTodoList(Integer userId, Integer status) {
-        return null;
+        return todoListRepo.findAllByUserIdAndStatus(userId, status);
     }
 }

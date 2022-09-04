@@ -19,14 +19,14 @@ public interface TodoListService {
      * @return
      */
 
-    boolean updateTodoStatus(Integer todoId);
+    boolean updateTodoStatus(Integer todoId,Integer userId);
 
     /**
      *  更新todo信息
      * @param todoList
      * @return
      */
-    TodoList updateTodoInfo(TodoList todoList);
+    TodoList updateTodoInfo(TodoList todoList,Integer userId);
 
     /**
      * 获取todo清单

@@ -36,7 +36,17 @@ public class TodoListServiceImpl implements TodoListService {
 
     @Override
     public TodoList updateTodoInfo(TodoList todoList, Integer userId) {
-        return null;
+        Integer id = todoList.getId();
+        Optional<TodoList> optional = todoListRepo.findById(id);
+        if (optional.isPresent()) {
+            TodoList oldTodoList = optional.get();
+            if (oldTodoList.getUserId().equals(userId)) {
+                todoList.setId(oldTodoList.getId());
+                todoListRepo.save(todoList);
+            }
+        }
+        //todo 这种应该抛出异常，然后前端给个提示；
+        return todoList;
     }
 
     @Override

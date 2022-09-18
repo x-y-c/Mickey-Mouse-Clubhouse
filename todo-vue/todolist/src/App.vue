@@ -5,15 +5,21 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+
+    <n-space vertical>
+      <n-card title="小卡片" size="small">
+        卡片内容
+      </n-card>
+      <n-card title="中卡片" size="medium">
+        卡片内容
+      </n-card>
+      <n-card title="大卡片" size="large">
+        卡片内容
+      </n-card>
+      <n-card title="超大卡片" size="huge">
+        卡片内容
+      </n-card>
+    </n-space>
 </template>
 
 <style scoped>

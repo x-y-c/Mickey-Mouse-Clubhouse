@@ -9,10 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "pattern.css": "^1.0.0",
+    "sass": "^1.54.9",
     "vue": "^3.2.37"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.1.0",
+    "naive-ui": "^2.33.3",
+    "vfonts": "^0.0.3",
     "vite": "^3.1.0"
   }
 }

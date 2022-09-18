@@ -1,5 +1,7 @@
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 import './style.css'
+import 'pattern.css'
 import App from './App.vue'
+import naive from 'naive-ui'
 
-createApp(App).mount('#app')
+const app = createApp(App).use(naive).mount('#app')

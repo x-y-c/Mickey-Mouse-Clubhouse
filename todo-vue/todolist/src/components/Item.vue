@@ -1,4 +1,9 @@
 <template>
+  <n-list>
+    <n-list-item>
+
+    </n-list-item>
+  </n-list>
 
 </template>
 

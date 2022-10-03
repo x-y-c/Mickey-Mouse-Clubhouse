@@ -2,24 +2,26 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
+import Todo from "./components/todo.vue";
 </script>
 
 <template>
+  <n-gradient-text type="success" size="60px">
+    todolist
+  </n-gradient-text>
+  <n-input v-model:value="value" type="text" placeholder="新的todo" />
+  <n-list hoverable clickable>
+    <n-list-item>
+      <Todo></Todo>
+    </n-list-item>
+    <n-list-item>
+      <Todo></Todo>
+    </n-list-item>
+    <n-list-item>
+      <Todo></Todo>
+    </n-list-item>
+  </n-list>
 
-    <n-space vertical>
-      <n-card title="小卡片" size="small">
-        卡片内容
-      </n-card>
-      <n-card title="中卡片" size="medium">
-        卡片内容
-      </n-card>
-      <n-card title="大卡片" size="large">
-        卡片内容
-      </n-card>
-      <n-card title="超大卡片" size="huge">
-        卡片内容
-      </n-card>
-    </n-space>
 </template>
 
 <style scoped>

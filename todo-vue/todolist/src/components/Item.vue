@@ -1,18 +1,23 @@
 <template>
-  <n-list>
-    <n-list-item>
+  <n-card size="small" class="todoitem">
+    <n-checkbox size="large"/>
+    666677777777
+    <n-button quaternary type="error">
+      del
+    </n-button>
+  </n-card>
 
-    </n-list-item>
-  </n-list>
 
 </template>
 
 <script>
 export default {
-  name: "Item"
+  name: "todo"
 }
 </script>
 
 <style scoped>
+
+
 
 </style>

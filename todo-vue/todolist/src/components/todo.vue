@@ -1,7 +1,12 @@
 <template>
-  <div class="pattern-checks-sm bg-blue white">
+  <n-card size="small" class="todoitem" :bordered="false">
+    <n-checkbox size="large"/>
+    666677777777
+    <n-button quaternary type="error">
+      del
+    </n-button>
+  </n-card>
 
-  </div>
 
 </template>
 
@@ -12,5 +17,7 @@ export default {
 </script>
 
 <style scoped>
+
+
 
 </style>

@@ -3,5 +3,7 @@ import './style.css'
 import 'pattern.css'
 import App from './App.vue'
 import naive from 'naive-ui'
+import axios from "axios";
+import VueAxios from "vue-axios";
 
-const app = createApp(App).use(naive).mount('#app')
+const app = createApp(App).use(naive).use(VueAxios).use(axios).mount('#app')

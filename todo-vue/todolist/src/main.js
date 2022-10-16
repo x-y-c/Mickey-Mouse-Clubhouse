@@ -6,4 +6,4 @@ import naive from 'naive-ui'
 import axios from "axios";
 import VueAxios from "vue-axios";
 
-const app = createApp(App).use(naive).use(VueAxios).use(axios).mount('#app')
+const app = createApp(App).use(naive).use(VueAxios).mount('#app')

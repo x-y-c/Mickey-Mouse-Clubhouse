@@ -1,4 +1,5 @@
 <script setup>
+import Drag from "./components/drag.vue"
 </script>
 
 <template>
@@ -7,7 +8,6 @@
   </n-gradient-text>
   <n-input v-model:value="value" type="text" placeholder="新的todo" />
   <Drag></Drag>
-
 </template>
 
 <style scoped>

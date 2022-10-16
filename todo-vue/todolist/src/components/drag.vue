@@ -6,27 +6,27 @@
         size="small"
         class="mt-4"
     >
-<!--      <n-list>-->
-<!--        <n-list-item>-->
+      <n-list>
+        <n-list-item>
 <!--          <template #prefix>-->
-<!--            <n-avatar circle :size="40" :src="schoolboy"/>-->
-<!--          </template>-->
-<!--          <n-thing title="Ah Jung 刚才把工作台页面随便写了一些，凑合能看了！">-->
+<!--&lt;!&ndash;            <n-avatar circle :size="40" :src="schoolboy"/>&ndash;&gt;-->
+<!--&lt;!&ndash;          </template>&ndash;&gt;-->
+          <n-thing title="Ah Jung 刚才把工作台页面随便写了一些，凑合能看了！">
 <!--            <template #description-->
 <!--            ><p class="text-xs text-gray-500">2021-07-04 22:37:16</p></template-->
 <!--            >-->
-<!--          </n-thing>-->
-<!--        </n-list-item>-->
-<!--        <n-list-item>-->
+          </n-thing>
+        </n-list-item>
+        <n-list-item>
 <!--          <template #prefix>-->
 <!--            <n-avatar circle :size="40" :src="schoolboy"/>-->
 <!--          </template>-->
-<!--          <n-thing title="Ah Jung 在 开源组 创建了项目 naive-ui-admin？">-->
+          <n-thing title="Ah Jung 在 开源组 创建了项目 naive-ui-admin？">
 <!--            <template #description-->
 <!--            ><p class="text-xs text-gray-500">2021-07-04 09:37:16</p></template-->
 <!--            >-->
-<!--          </n-thing>-->
-<!--        </n-list-item>-->
+          </n-thing>
+        </n-list-item>
 <!--        <n-list-item>-->
 <!--          <template #prefix>-->
 <!--            <n-avatar circle :size="40" :src="schoolboy"/>-->
@@ -69,7 +69,7 @@
 <!--            </template>-->
 <!--          </n-thing>-->
 <!--        </n-list-item>-->
-<!--      </n-list>-->
+      </n-list>
     </n-card>
   </div>
 </template>

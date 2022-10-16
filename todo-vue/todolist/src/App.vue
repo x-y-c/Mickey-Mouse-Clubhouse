@@ -1,8 +1,8 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
 import Todo from "./components/todo.vue";
+import Drag from "./components/drag.vue"
 </script>
 
 <template>
@@ -10,17 +10,7 @@ import Todo from "./components/todo.vue";
     todolist
   </n-gradient-text>
   <n-input v-model:value="value" type="text" placeholder="新的todo" />
-  <n-list hoverable clickable>
-    <n-list-item>
-      <Todo></Todo>
-    </n-list-item>
-    <n-list-item>
-      <Todo></Todo>
-    </n-list-item>
-    <n-list-item>
-      <Todo></Todo>
-    </n-list-item>
-  </n-list>
+  <Drag></Drag>
 
 </template>
 

@@ -24,8 +24,10 @@ public class TodoController {
     //创建todo
     @Login
     @PostMapping("/create")
-    public TodoList createTodo(@RequestBody TodoList todoList) {
+    public TodoList createTodo(HttpServletRequest request, @RequestBody TodoList todoList) {
         //validUser 自己创建或者同组间创建
+        DecodedJWT token = JWTUtils.getTokenInfo(request.getHeader("token"));
+        Integer userId = JWTUtils.getUserId(token);
         TodoList todo = todoListService.createTodo(todoList);
         return todo;
     }

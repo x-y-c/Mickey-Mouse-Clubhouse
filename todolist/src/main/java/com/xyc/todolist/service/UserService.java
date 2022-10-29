@@ -32,10 +32,11 @@ public interface UserService {
 
     /**
      * 用来判断使用是否有操作的权限
-     * @param userId
-     * @return
+     * @param currentUser 当前操作用户
+     * @param targetUser 被操作的用户
+     * @return 默认如果同一个用户有权限，，另外有该组管理员权限的，有权限操作
      */
-    boolean validUserPermission(Integer userId);
+    boolean validUserPermission(Integer currentUser,Integer targetUser);
 
 
 

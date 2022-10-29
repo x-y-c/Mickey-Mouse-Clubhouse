@@ -52,4 +52,9 @@ public class UserServiceImpl implements UserService {
             return JsonResult.errorResult(ResultCode.WRONG_PASSWORD, "用户不存在或密码不正确", "");
         }
     }
+
+    @Override
+    public boolean validUserPermission(Integer currentUser, Integer targetUser) {
+        return currentUser.equals(targetUser);
+    }
 }

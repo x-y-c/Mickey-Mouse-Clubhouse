@@ -30,5 +30,13 @@ public interface UserService {
     JsonResult resetPassword(String username,String email,String newPassword);
 
 
+    /**
+     * 用来判断使用是否有操作的权限
+     * @param userId
+     * @return
+     */
+    boolean validUserPermission(Integer userId);
+
+
 
 }

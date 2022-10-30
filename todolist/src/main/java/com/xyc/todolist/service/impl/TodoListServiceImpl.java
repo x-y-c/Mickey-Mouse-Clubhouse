@@ -58,4 +58,15 @@ public class TodoListServiceImpl implements TodoListService {
     public List<TodoList> getTodoList(Integer userId, Integer status) {
         return todoListRepo.findAllByUserIdAndStatus(userId, status);
     }
+
+    @Override
+    public boolean deleteTodo(Integer todoId) {
+        Optional<TodoList> todoList = todoListRepo.findById(todoId);
+        if (todoList.isPresent()) {
+            TodoList todoList1 = todoList.get();
+            todoList1.setStatus(-1);//todo 留坑，暂且认为-1是删除
+            todoListRepo.save(todoList1);
+        }
+        return true;
+    }
 }

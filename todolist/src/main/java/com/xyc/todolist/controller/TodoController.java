@@ -6,6 +6,7 @@ import com.xyc.todolist.anno.Login;
 import com.xyc.todolist.entity.TodoList;
 import com.xyc.todolist.service.TodoListService;
 import com.xyc.todolist.utils.JWTUtils;
+import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Service;
@@ -34,7 +35,7 @@ public class TodoController {
 
     //编辑todo
     @Login
-    @PostMapping
+    @PostMapping("/update")
     public TodoList updateTodo(HttpServletRequest request, @RequestBody TodoList todoList) {
         String token = request.getHeader("token");
         DecodedJWT tokenInfo = JWTUtils.getTokenInfo(token);
@@ -44,4 +45,13 @@ public class TodoController {
 
 
     //删除todo
+    @Login
+    @PostMapping("/delete")
+    public void delete(Integer todoId, HttpServletRequest request) {
+        String token = request.getHeader("token");
+        DecodedJWT tokenInfo = JWTUtils.getTokenInfo(token);
+        Integer userId = JWTUtils.getUserId(tokenInfo);
+        return todoListService.deleteTodo(todoId);
+
+    }
 }

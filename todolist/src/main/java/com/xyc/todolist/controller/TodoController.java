@@ -51,7 +51,7 @@ public class TodoController {
         String token = request.getHeader("token");
         DecodedJWT tokenInfo = JWTUtils.getTokenInfo(token);
         Integer userId = JWTUtils.getUserId(tokenInfo);
-        todoListService.deleteTodo(todoId);
+        todoListService.deleteTodo(todoId, userId);
 
     }
 }

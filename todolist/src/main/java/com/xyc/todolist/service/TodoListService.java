@@ -51,5 +51,5 @@ public interface TodoListService {
     /**
      * 组内可以相互查看todo；
      */
-    boolean deleteTodo(Integer todoId);
+    boolean deleteTodo(Integer todoId,Integer userId);
 }

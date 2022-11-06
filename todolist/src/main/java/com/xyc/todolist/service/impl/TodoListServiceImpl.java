@@ -61,6 +61,7 @@ public class TodoListServiceImpl implements TodoListService {
 
     @Override
     public boolean deleteTodo(Integer todoId) {
+        //todo 验证用户id，如果是自己才能删除
         Optional<TodoList> todoList = todoListRepo.findById(todoId);
         if (todoList.isPresent()) {
             TodoList todoList1 = todoList.get();

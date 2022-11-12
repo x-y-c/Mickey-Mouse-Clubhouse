@@ -3,11 +3,10 @@ import Drag from "./components/drag.vue"
 </script>
 
 <template>
-  <n-gradient-text type="success" size="60px">
-    todolist
-  </n-gradient-text>
-  <n-input v-model:value="value" type="text" placeholder="新的todo" />
-  <Drag></Drag>
+  <div>
+    <h1>TODO list</h1>
+
+  </div>
 </template>
 
 <style scoped>

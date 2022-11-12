@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+</section>
+
+</body>
+<style>
+    section{
+        display: flex;
+        width: 60%;
+        height: 150px;
+        background-color: azure;
+        margin: 0 auto;
+    }
+    section div:nth-child(1){
+        width: 100px;
+        height: 150px;
+        background-color: #535bf2;
+    }
+    section div:nth-child(2){
+        flex: 1;
+    }
+    section div:nth-child(3){
+        width: 100px;
+        height: 150px;
+        background-color: aqua;
+    }
+
+</style>
+<!--所谓的圣杯布局-->
+</html>
+<script>
+    import Drag from "../components/drag.vue";
+    export default {
+        components: {Drag}
+    }
+</script>

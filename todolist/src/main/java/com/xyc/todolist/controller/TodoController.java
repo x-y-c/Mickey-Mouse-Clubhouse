@@ -2,6 +2,7 @@ package com.xyc.todolist.controller;
 
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.xyc.todolist.anno.Login;
+import com.xyc.todolist.dto.JsonResult;
 import com.xyc.todolist.entity.TodoList;
 import com.xyc.todolist.service.TodoListService;
 import com.xyc.todolist.utils.JWTUtils;
@@ -21,33 +22,34 @@ public class TodoController {
     //创建todo
     @Login
     @PostMapping("/create")
-    public TodoList createTodo(HttpServletRequest request, @RequestBody TodoList todoList) {
+    public JsonResult createTodo(HttpServletRequest request, @RequestBody TodoList todoList) {
         //validUser 自己创建或者同组间创建
         DecodedJWT token = JWTUtils.getTokenInfo(request.getHeader("token"));
         Integer userId = JWTUtils.getUserId(token);
         TodoList todo = todoListService.createTodo(todoList);
-        return todo;
+        return new JsonResult("");
     }
 
     //编辑todo
     @Login
     @PostMapping("/update")
-    public TodoList updateTodo(HttpServletRequest request, @RequestBody TodoList todoList) {
+    public JsonResult updateTodo(HttpServletRequest request, @RequestBody TodoList todoList) {
         String token = request.getHeader("token");
         DecodedJWT tokenInfo = JWTUtils.getTokenInfo(token);
         Integer userId = JWTUtils.getUserId(tokenInfo);
-        return todoListService.updateTodoInfo(todoList, userId);
+        todoListService.updateTodoInfo(todoList, userId);
+        return new JsonResult("");
     }
 
 
     //删除todo
     @Login
     @PostMapping("/delete")
-    public void delete(Integer todoId, HttpServletRequest request) {
+    public JsonResult delete(Integer todoId, HttpServletRequest request) {
         String token = request.getHeader("token");
         DecodedJWT tokenInfo = JWTUtils.getTokenInfo(token);
         Integer userId = JWTUtils.getUserId(tokenInfo);
         todoListService.deleteTodo(todoId, userId);
-
+        return new JsonResult("");
     }
 }

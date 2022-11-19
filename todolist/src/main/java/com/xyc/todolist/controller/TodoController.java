@@ -1,15 +1,11 @@
 package com.xyc.todolist.controller;
 
 import com.auth0.jwt.interfaces.DecodedJWT;
-import com.sun.tools.javac.comp.Todo;
 import com.xyc.todolist.anno.Login;
 import com.xyc.todolist.entity.TodoList;
 import com.xyc.todolist.service.TodoListService;
 import com.xyc.todolist.utils.JWTUtils;
-import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;

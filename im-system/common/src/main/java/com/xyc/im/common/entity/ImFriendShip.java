@@ -1,8 +1,10 @@
-package src.main.java.com.xyc.im.common.entity;
+package com.xyc.im.common.entity;
+
+import lombok.Data;
 
 import java.util.Date;
 
-
+@Data
 public class ImFriendShip{
     private Integer appId;
     private String fromId;

@@ -1,4 +1,4 @@
-package com.xyc.im.common.entity;
+package com.xyc.im.service.friendship;
 
 import lombok.Data;
 

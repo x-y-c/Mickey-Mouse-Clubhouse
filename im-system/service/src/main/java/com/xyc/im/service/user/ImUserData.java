@@ -1,4 +1,4 @@
-package common.src.main.java.com.xyc.im.common.entity;
+package com.xyc.im.service.user;
 
 
 import java.util.Date;

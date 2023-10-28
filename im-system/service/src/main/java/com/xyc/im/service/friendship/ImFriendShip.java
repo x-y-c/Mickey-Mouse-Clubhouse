@@ -1,11 +1,19 @@
 package com.xyc.im.service.friendship;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 import java.util.Date;
 
 @Data
-public class ImFriendShip{
+@Table(name = "im_friend_ship")
+public class ImFriendShip {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private Integer appId;
     private String fromId;
     private String toId;
@@ -18,7 +26,6 @@ public class ImFriendShip{
     private Integer blackSequence;
     private String addSource;
     private String extra;
-
 
 
 }

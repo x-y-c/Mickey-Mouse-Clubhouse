@@ -1,4 +1,4 @@
-package com.xyc.im.service.friendship;
+package com.xyc.im.service.friendship.entity;
 
 
 import jakarta.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package com.xyc.im.service.user;
+package com.xyc.im.service.user.entity;
 
 
 import jakarta.persistence.GeneratedValue;

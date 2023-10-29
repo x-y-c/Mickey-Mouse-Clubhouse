@@ -1,6 +1,6 @@
 package com.xyc.im.service.friendship.repo;
 
-import com.xyc.im.service.friendship.ImFriendShipGroup;
+import com.xyc.im.service.friendship.entity.ImFriendShipGroup;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

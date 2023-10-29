@@ -1,6 +1,6 @@
 package com.xyc.im.service.user.repo;
 
-import com.xyc.im.service.user.ImUserData;
+import com.xyc.im.service.user.entity.ImUserData;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

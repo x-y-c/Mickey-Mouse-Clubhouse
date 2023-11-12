@@ -1,4 +1,4 @@
-package com.xyc.im.service.group;
+package com.xyc.im.service.group.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

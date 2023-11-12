@@ -3,7 +3,9 @@ package com.xyc.im.service.group.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Data;
 
+@Data
 @Entity
 @Table(name = "im_group_message_history")
 public class ImGroupMessageHistory {

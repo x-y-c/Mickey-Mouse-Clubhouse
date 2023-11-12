@@ -1,4 +1,4 @@
-package com.xyc.im.service.message;
+package com.xyc.im.service.message.entity;
 
 import jakarta.persistence.Table;
 import lombok.Data;

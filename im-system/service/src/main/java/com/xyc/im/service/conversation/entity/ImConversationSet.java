@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class ImConversationSetEntity {
+public class ImConversationSet {
 
     @Id
     private Long id;

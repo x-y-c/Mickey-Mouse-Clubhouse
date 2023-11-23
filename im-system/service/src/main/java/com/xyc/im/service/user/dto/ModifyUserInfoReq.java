@@ -1,5 +1,8 @@
 package com.xyc.im.service.user.dto;
 
+import lombok.Data;
+
+@Data
 public class ModifyUserInfoReq {
     private String userId;
     private String location;

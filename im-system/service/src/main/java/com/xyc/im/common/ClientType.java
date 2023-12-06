@@ -1,8 +1,20 @@
 package com.xyc.im.common;
 
 public enum ClientType {
+    /**
+     * 设备类型
+     */
+    /**
+     * web端api
+     */
     WEBAPI(0, "webapi"),
+    /**
+     * web端服务
+     */
     WEB(1, "web"),
+    /**
+     * IOS服务
+     */
     IOS(2, "ios"),
     ANDROID(3, "android"),
     WINDOWS(4, "windows"),

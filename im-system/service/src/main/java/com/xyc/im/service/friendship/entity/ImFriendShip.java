@@ -22,7 +22,9 @@ public class ImFriendShip {
     private Integer black;
     private Date createTime;
     private Integer friendSequence;
-
+    /**
+     * 黑名单
+     */
     private Integer blackSequence;
     private String addSource;
     private String extra;

@@ -1,8 +1,9 @@
 package com.xyc.im.codec.util;
 
-import com.google.protobuf.Message;
 
 
+
+import com.xyc.im.codec.proto.Message;
 import io.netty.buffer.ByteBuf;
 
 public class ByteBufToMessageUtils {

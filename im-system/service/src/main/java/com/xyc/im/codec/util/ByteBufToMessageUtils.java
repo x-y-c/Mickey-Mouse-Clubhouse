@@ -3,6 +3,7 @@ package com.xyc.im.codec.util;
 
 
 
+import com.alibaba.fastjson.JSONObject;
 import com.xyc.im.codec.proto.Message;
 import com.xyc.im.codec.proto.MessageHeader;
 import io.netty.buffer.ByteBuf;

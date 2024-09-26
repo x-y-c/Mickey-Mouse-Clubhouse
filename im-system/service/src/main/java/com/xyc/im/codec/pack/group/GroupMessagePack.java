@@ -1,7 +1,11 @@
 package com.xyc.im.codec.pack.group;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class GroupMessagePack {
     private String messageId;

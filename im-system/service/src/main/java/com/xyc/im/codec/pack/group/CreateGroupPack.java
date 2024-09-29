@@ -1,7 +1,9 @@
 package com.xyc.im.codec.pack.group;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
+@AllArgsConstructor
 @Data
 public class CreateGroupPack {
     private String groupId;

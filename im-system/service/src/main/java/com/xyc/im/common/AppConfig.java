@@ -1,6 +1,8 @@
 package com.xyc.im.common;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import lombok.Data;
+import org.springframework.stereotype.Component;
 
 @Data
 @Component

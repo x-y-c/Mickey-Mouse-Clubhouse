@@ -1,14 +1,14 @@
-package com.xyc.im.common;
+package com.xyc.im.common.config;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import lombok.Data;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Data
 @Component
-@ConfigurationProperties(prefix = "appconfig2")
+@ConfigurationProperties(prefix = "appconfig")
+@Data
 public class AppConfig {
-
     private String privateKey;
 
     /** zk连接地址*/
@@ -64,4 +64,3 @@ public class AppConfig {
     private Integer offlineMessageCount;//离线消息最大条数
 
 }
-

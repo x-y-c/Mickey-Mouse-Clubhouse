@@ -11,15 +11,6 @@ public enum MediaEventCommand implements Command {
     //6002 同意请求 notify ack
     ACCEPT_CALL(6002),
 
-    //6003 同步ice
-//    TRANSMIT_ICE(6003),
-
-//    //6004 发送offer
-//    TRANSMIT_OFFER(6004),
-
-//    //6005 发送ANSWER
-//    TRANSMIT_ANSWER(6005),
-
     //6006 hangup 挂断 notify ack
     HANG_UP(6006),
 
